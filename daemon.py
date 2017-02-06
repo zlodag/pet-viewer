@@ -3,6 +3,7 @@
 import requests
 import json
 import time
+import os
 from xml.etree import ElementTree
 from datetime import datetime, timezone
 
@@ -27,7 +28,7 @@ def updateLoop(firebase_app_name, api, lastTimestamp):
     return timestamp
 
 if __name__ == '__main__':
-    config = json.load(open('config.json'))
+    config = json.load(open(os.path.join(os.path.dirname(__file__), 'config.json')))
     lastTimestamp = 0
     while True:
         lastTimestamp = updateLoop(config['firebase_app_name'], config['api'], lastTimestamp)
