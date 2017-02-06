@@ -1,1 +1,17 @@
-<h1>Testing</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pet Tracker</title>
+    <script src="https://www.gstatic.com/firebasejs/3.6.8/firebase.js"></script>
+    <script>
+      firebase.initializeApp({
+        databaseURL: "https://pet-tracker-4f694.firebaseio.com"
+      });
+    </script>
+    <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcA7nZ3ZEV1NNaeBhQ8o8XNFlmhx09lAk&libraries=visualization&callback=initMap" async defer></script>
+</head>
+<body>
+    <div id="map"></div>
+</body>
+</html>
